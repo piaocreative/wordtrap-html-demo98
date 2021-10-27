@@ -1,0 +1,96 @@
+/* ----------------------------------------------------------------
+	Extra Styles
+-----------------------------------------------------------------*/
+.container-fluid {
+	overflow: hidden;
+}
+
+.arrows {
+	position: absolute;
+    bottom: 0.5rem;
+    left: 3rem;
+	gap: 7rem;
+
+	a {
+		color: #cccccc;
+		font-size: 1.25rem;
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+#stretch {
+	@include media-breakpoint-up(lg) {
+		padding: 13rem 0 8rem;
+		z-index: 1;
+	}
+}
+
+.stretch-image {
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		top:5rem;
+		left: 25%;
+		z-index: -1;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.program {
+	display: block;
+	padding: 2rem;
+	border-radius: 2rem;
+	margin-bottom: 1.875rem;
+
+	@include transition(all 0.5s ease-in-out);
+
+	.program-title {
+		font-size: 1.25rem;
+	}
+
+	.program-price {
+		font-family: $heading-font;
+		font-size: 1.25rem;
+		color: $dark;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 30px 5px #f1f1f1;
+
+		.program-title, .program-price {
+			color: $theme-color;
+		}
+	}
+}
+
+.slick-slide {
+	height: auto;
+}
+
+.slick-dots {
+	display: flex;
+	left: 3rem;
+
+	li {
+		button {
+			&:before {
+				color: #e5e5e5;
+				opacity: 1;
+				font-size: 0.65rem;
+			}
+		}
+
+		&.slick-active {
+			button {
+				&:before {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}

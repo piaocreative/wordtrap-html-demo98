@@ -1,0 +1,35 @@
+/*-----------------------------------------------------------------------------------
+
+	Shortcodes: timeline.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Timeline Styles
+-----------------------------------------------------------------*/
+.event-date {
+    font-size: 1.625rem;
+    font-weight: 400;
+    color: #979797;
+
+    &:before {
+        content: "";
+        position: relative;
+        right: 0.5rem;
+        display: inline-block;
+        width: 1rem;
+        height: 1px;
+        vertical-align: middle;
+        background-color: #979797;
+    }
+
+    &.active {
+        font-size: 2.5rem;
+        color: $theme-color;
+
+        &:before {
+            width: 2rem;
+            background-color: $theme-color;
+        }
+    }
+}

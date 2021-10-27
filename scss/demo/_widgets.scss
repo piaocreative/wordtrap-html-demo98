@@ -1,0 +1,144 @@
+
+/* ----------------------------------------------------------------
+
+	widgets.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for widgets. Thanks!
+-----------------------------------------------------------------*/
+
+
+.widget {
+	position: relative;
+
+	.widget-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		color: $white;
+	}	
+
+	// Widget - Social
+	&.widget-social {
+		.widget-content {
+			.social-icons {
+				padding: 0;
+				list-style: none;
+				margin-top: -0.5rem;
+	
+				li {
+					padding: 0 0.25rem;
+	
+					&:last-child {
+						padding-right: 0;
+					}
+			
+					a {
+						color: $white;		
+						display: inline-block;
+						line-height: 1.8125rem;	
+						vertical-align: middle;
+						text-align: center;
+						border-radius: 0.5rem;	
+	
+						@include transition(all 0.3s ease-in-out);
+			
+						&:hover {
+							color: $theme-color;
+						}
+			
+						i {
+							vertical-align: top;
+							line-height: 1.8125rem;
+							padding: 0.5rem;
+							font-size: 1.25rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Widget - Links
+	&.widget-links {
+		ul {
+			list-style: none;
+
+			li {
+				margin-bottom: 0.3rem;
+
+				a {
+					color: $white;
+
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			.widget-content {
+				justify-content: space-between;
+			}
+
+			ul {
+				width: auto;
+				margin: auto;
+			}
+		}
+	}
+
+	// Widget - Payments
+	&.widget-payment {
+		.payments {
+			.payment-icon {
+				display: flex;
+				align-items: center;
+				vertical-align: middle;
+				margin-right: .5rem;
+				padding: 0.2rem;
+
+				img {
+					width: 3rem;
+				}
+			}
+		}
+	}
+
+	// Widget - custom html
+	&.widget-custom-html {
+		.widget-content {
+			a {	
+				display: block;
+			}
+		}
+	}
+
+	&.widget-subscribe {
+		.widget-content {
+			#widget-subscribe-form {
+				.input-group-append {
+					margin-left: -1rem;
+				}
+
+				input {
+					border-color: #616161;
+				}
+
+				button {
+					padding: 0.7rem 1.2rem;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}

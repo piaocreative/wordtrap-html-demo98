@@ -1,0 +1,21 @@
+.logos {
+	display: flex;
+	justify-content: space-between;
+
+	.logo-item {
+		border-radius: 1.5rem;
+		background-color: #f6fbfc;
+		max-width: 8.625rem;
+		height: 8.25rem;
+		width: 100%;		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
+} 
